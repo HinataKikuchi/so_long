@@ -8,7 +8,7 @@ OBJS	:=	$(SRCS:.c=.o)
 LIBFT_DIR	=	../libft
 LIBFT		=	${LIBFT_DIR}/libft.a
 
-INCLUDE		=	-I./ -I./${LIBFT_DIR}
+INCLUDE		=	-I./ -I./${LIBFT_DIR} -I../include
 
 LIBS		=	-L${LIBFT_DIR} -lft
 

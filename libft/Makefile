@@ -2,7 +2,8 @@ NAME	= libft.a
 CC		= gcc
 CFLAGS	= -Wall -Wextra -Werror -fPIC
 LDFLAGS	= -L/usr/local/lib
-LIBS	= 
+LIBS	=
+INCLUDE = ../include 
 SRC		= ft_atoi.c ft_isascii.c ft_memchr.c ft_putchar_fd.c ft_strchr.c\
 	ft_strlen.c ft_strtrim.c ft_bzero.c ft_isdigit.c ft_memcmp.c\
 	ft_putendl_fd.c ft_strdup.c ft_strmapi.c ft_substr.c ft_calloc.c\
@@ -13,7 +14,7 @@ SRC		= ft_atoi.c ft_isascii.c ft_memchr.c ft_putchar_fd.c ft_strchr.c\
 OBJS	= $(SRC:.c=.o)
 
 %.o:%.c
-		@$(CC) $(CFLAGS) -o $@ -c $<
+		@$(CC) $(CFLAGS) -I$(INCLUDE) -o $@ -c $<
 		@printf ">"
 
 all: $(NAME)
