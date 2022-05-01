@@ -1,0 +1,8 @@
+# LIBRALY FILES
+lib*.h
+
+# exe .a .o
+*.a
+*.exe
+*.o
+a.out
